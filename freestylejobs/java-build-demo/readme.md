@@ -5,13 +5,6 @@ This project demonstrates building a Java application using **Maven** in a **Jen
 
 ## Project Structure
 
-```
-
-freestylejobs/
-└── java-build-demo/
-├── pom.xml
-└── src/
-└── main/java/...
 
 ````
 
