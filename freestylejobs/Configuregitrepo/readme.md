@@ -1,5 +1,3 @@
----
-
 ````markdown
 # Jenkins Freestyle Job with GitHub Integration
 
