@@ -3,7 +3,8 @@
 
 ## 📌 Overview
 In this project, I created a **Jenkins Freestyle Job** and connected it with a **GitHub repository** to automatically clone the code and run a script.
-<img width="967" height="838" alt="image" src="https://github.com/user-attachments/assets/d6643946-4cb9-451c-91af-e2868394d106" />
+
+<img width="635" height="933" alt="image" src="https://github.com/user-attachments/assets/da5552eb-7eca-45eb-984c-66e0a6f5b30f" />
 
 
 ---
