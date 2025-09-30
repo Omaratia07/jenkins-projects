@@ -109,6 +109,9 @@ docker run -d -p 8080:8080 <dockerhub-username>/java-maven-app:latest
 
 To make sure everything worked correctly, check your **Docker Hub repository** and confirm that the image was pushed successfully.
 
+![WhatsApp Image 2025-09-30 at 10 23 27 PM](https://github.com/user-attachments/assets/16c2ceb3-c874-4bad-9b38-a7c7c5badb28)
+
+
 ```
 
 ```
