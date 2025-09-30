@@ -16,10 +16,15 @@ The pipeline consists of:
 ## 🗂️ Project Structure
 ```
 
+
 freestylejobs/project/
+
 │── src/                 # Java source code
+
 │── pom.xml              # Maven configuration file
+
 │── Dockerfile           # Docker build instructions
+
 │── README.md            # Project documentation
 
 ````
