@@ -53,6 +53,8 @@ After the pipeline finishes successfully:
 1. Go to **[Docker Hub](https://hub.docker.com/)**.
 2. Check your repository (`omaralaa87/myapp`).
 3. Make sure the new image tag (e.g., `1.1`) is listed.
+<img width="1858" height="1077" alt="Screenshot 2025-10-01 211823" src="https://github.com/user-attachments/assets/40519dbd-14c6-4f68-99b5-5d3e7643e026" />
+
 
 ---
 
