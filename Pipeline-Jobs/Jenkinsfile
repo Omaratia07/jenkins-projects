@@ -16,7 +16,7 @@ ipipeline{
             steps{
                 script{ 
                     echo "building docker image "
-                    withCredentials([usernamePassword(credentialsId:'docker-hub-credentials', passwordVariable'PASSWORD', usernameVariable'USERNAME') ])
+                    withCredentials([usernamePassword(credentialsId:'docker-hub-credentials', passwordVariable:'PASSWORD', usernameVariable:'USERNAME') ])
                     
                     sh 'docker build -t omaralaa87/myapp:1.1 . '
                     sh "echo $PASSWORD | docker login -u $USERNAME --password-stdin"
