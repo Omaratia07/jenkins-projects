@@ -9,7 +9,7 @@
                 script{ 
                     echo "building the application"
                     sh'''
-                    cd /jenkins-projects/Pipeline-Jobs
+                    cd Pipeline-Jobs
                     mvn package
                     '''
                      
