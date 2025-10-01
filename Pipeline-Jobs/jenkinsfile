@@ -1,0 +1,40 @@
+pipeline{
+    agent any
+    tools {
+        maven 'maven16'
+    }
+    stages {
+        stage("build jar "){
+            steps{
+                script{ 
+                    echo "building the application"
+                    sh 'mvn package '        
+                }
+            }
+        }
+        stage("build docker image"){
+            steps{
+                script{ 
+                    echo "building docker image "
+                    withCredentials([usernamePassword(credentialsId:'docker-hub-credentials'), passwordVariable'PASSWORD', usernameVariable'USERNAME' ])
+                    
+                    sh 'docker build -t omaralaa87/myapp:1.1 . '
+                    sh "echo $PASSWORD | docker login -u $USERNAME --password-stdin"
+                }
+            }
+        }
+        stage(push to dockerhub){
+            steps{
+                script{ echo "deploying application to dockerhub"
+                        sh 'docker push omaralaa87/myapp:1.1 '
+
+                }
+            }
+        }
+
+    }
+
+
+
+
+}
