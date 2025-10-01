@@ -23,7 +23,7 @@ ipipeline{
                 }
             }
         }
-        stage(push to dockerhub){
+        stage("push to dockerhub"){
             steps{
                 script{ echo "deploying application to dockerhub"
                         sh 'docker push omaralaa87/myapp:1.1 '
