@@ -8,7 +8,12 @@
             steps{
                 script{ 
                     echo "building the application"
-                    sh 'mvn package '        
+                    sh'''
+                    cd /jenkins-projects/Pipeline-Jobs
+                    mvn package
+                    '''
+                     
+                                
                 }
             }
         }
