@@ -33,7 +33,7 @@ pipeline{
                     echo "Building Docker Image "
                     withCredentials([usernamePassword(credentialsId:'docker-hub-credentials', passwordVariable:'PASSWORD', usernameVariable:'USERNAME' )])
                     {
-                    sh 'docker build -t omaralaa87/myapp:1.1 Full-CI-CD-Project/'
+                    sh 'docker build -t omaralaa87/myapp:1.2 Full-CI-CD-Project/'
                     sh "echo $PASSWORD | docker login -u $USERNAME --password-stdin"
                     }
                 }
@@ -42,7 +42,7 @@ pipeline{
         stage("push to dockerhub"){
             steps{
                 script{ echo "Deploying Application To Dockerhub"
-                        sh 'docker push omaralaa87/myapp:1.1'
+                        sh 'docker push omaralaa87/myapp:1.2'
 
                 }
             }
