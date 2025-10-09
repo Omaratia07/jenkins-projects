@@ -1,0 +1,113 @@
+cat > src/main/resources/static/index.html <<'HTML'
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Omar's Restaurant — Welcome</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#ff6b6b; --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(135deg,#071126 0%, #07263a 100%); color:#eaf2ff; -webkit-font-smoothing:antialiased}
+    header{padding:32px 20px; display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin:0 auto;}
+    .logo{display:flex; gap:12px; align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,var(--accent),#ff8a8a); display:flex;align-items:center;justify-content:center;font-weight:700}
+    .nav{display:flex; gap:14px; align-items:center}
+    .btn{background:var(--glass); padding:10px 14px; border-radius:10px; color:var(--muted); text-decoration:none; font-weight:600}
+    main{max-width:1100px;margin:24px auto;padding:20px}
+    .hero{display:flex; gap:32px; align-items:center; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:28px; border-radius:16px; box-shadow: 0 6px 20px rgba(2,6,23,0.6)}
+    .hero-left{flex:1}
+    h1{font-size:32px;margin:0 0 8px}
+    p.lead{color:var(--muted); margin:0 0 18px}
+    .menu-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-top:18px}
+    .card{background:var(--card); padding:16px; border-radius:12px; box-shadow:0 4px 12px rgba(2,6,23,0.5)}
+    .price{font-weight:700; color:var(--accent)}
+    footer{max-width:1100px;margin:28px auto;padding:12px;color:var(--muted); text-align:center}
+    @media(max-width:760px){ .hero{flex-direction:column} h1{font-size:24px} header{padding:18px} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="mark">OR</div>
+      <div>
+        <div style="font-weight:700">Omar's Restaurant</div>
+        <div style="font-size:12px;color:var(--muted)">Hot & Fresh — Demo</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a class="btn" href="#menu">Menu</a>
+      <a class="btn" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Delicious meals delivered fast 🍽️</h1>
+        <p class="lead">A small demo site to showcase your CI/CD pipeline — responsive, minimal and clean. Try the menu below.</p>
+        <div style="display:flex; gap:12px; margin-top:12px">
+          <a class="btn" href="#menu">Explore Menu</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div style="width:320px">
+        <div style="background:linear-gradient(180deg,#0b2033,#071226); padding:18px; border-radius:12px;">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='140'><rect rx='12' width='100%' height='100%' fill='%23ff6b6b'/><text x='50%' y='55%' font-size='20' text-anchor='middle' fill='white' font-family='Arial' dy='.3em'>Chef's Special</text></svg>" alt="dish" style="width:100%; border-radius:8px; display:block"/>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" style="margin-top:20px">
+      <h2 style="margin:0 0 12px">Menu</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <div style="font-weight:700">Spicy Chicken Bowl</div>
+          <div style="color:var(--muted); font-size:13px">Grilled chicken, rice, fresh salsa</div>
+          <div class="price" style="margin-top:8px">$8.99</div>
+        </div>
+        <div class="card">
+          <div style="font-weight:700">Veggie Delight</div>
+          <div style="color:var(--muted); font-size:13px">Roasted vegetables, quinoa</div>
+          <div class="price" style="margin-top:8px">$7.50</div>
+        </div>
+        <div class="card">
+          <div style="font-weight:700">Classic Burger</div>
+          <div style="color:var(--muted); font-size:13px">Beef patty, cheddar, fries</div>
+          <div class="price" style="margin-top:8px">$9.25</div>
+        </div>
+        <div class="card">
+          <div style="font-weight:700">Chef's Salad</div>
+          <div style="color:var(--muted); font-size:13px">Mixed greens, seasonal fruits</div>
+          <div class="price" style="margin-top:8px">$6.80</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <h2 style="margin:0 0 12px">Contact</h2>
+      <div class="card" style="display:flex;gap:12px;align-items:center">
+        <div>
+          <div style="font-weight:700">Omar's Restaurant (Demo)</div>
+          <div style="color:var(--muted); font-size:13px">Email: hello@example.com</div>
+          <div style="color:var(--muted); font-size:13px">Phone: +20 100 000 0000</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Omar's Restaurant — Demo. Built for CI/CD testing.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+HTML
+

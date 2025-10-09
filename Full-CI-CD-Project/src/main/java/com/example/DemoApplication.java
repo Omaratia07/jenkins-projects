@@ -12,9 +12,6 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
-    @GetMapping("/")
-    public String home() {
-        return "<h1>Hello from Java Web App!</h1>";
-    }
-}
+   }
+
 
