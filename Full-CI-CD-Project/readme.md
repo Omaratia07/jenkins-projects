@@ -21,13 +21,15 @@ It automates testing, building, containerization, and deployment — providing h
 
 ## 🏗️ **Project Architecture**
 
-*(Add your architecture diagram here)*
+<img width="1317" height="650" alt="Screenshot 2025-10-09 074254" src="https://github.com/user-attachments/assets/99498567-c4d4-40cf-896f-878a904f9a68" />
+
 
 
 ---
 
 ## 🌐 **Web Application Screenshot**
 
+![WhatsApp Image 2025-10-09 at 7 30 17 AM](https://github.com/user-attachments/assets/3711c1c6-d60a-4210-8bcb-91704cbc14b4)
 
 ---
 
