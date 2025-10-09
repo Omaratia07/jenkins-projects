@@ -57,12 +57,12 @@ pipeline {
                     echo "Deploying The Application"
                     sshagent(['ec2-ssh']) {
                         sh '''
-                        ssh -o StrictHostKeyChecking=no ubuntu@18.207.155.128 << EOF
+                        ssh -o StrictHostKeyChecking=no ubuntu@18.207.155.128 "
                         sudo docker stop myapp || true
                         sudo docker rm myapp || true
                         sudo docker pull omaralaa87/myapp:1.2
                         sudo docker run -d -p 8080:8080 --name myapp omaralaa87/myapp:1.2
-                        EOF
+                        "
                         '''
                     }
                 }
