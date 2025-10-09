@@ -1,6 +1,3 @@
-
-
-```markdown
 # 🧰 Jenkins Projects Repository
 
 Welcome to my **Jenkins Projects Repository** — a collection of hands-on projects and practical examples for anyone learning **CI/CD automation** with Jenkins 🚀  
@@ -61,7 +58,4 @@ Each project is simple, independent, and designed to highlight a specific CI/CD 
 
 ### ⭐ If you found this helpful
 Give this repository a **star** ⭐ and share it with others learning Jenkins & CI/CD!
-```
-
----
 
